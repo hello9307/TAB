@@ -1,0 +1,84 @@
+/*
+* @Author: Administrator
+* @Date:   2017-10-15 22:40:31
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-10-15 23:19:03
+*/
+div,ul,li,p{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+#tab{
+	width: 500px;
+	height: 242px;
+	border: 1px solid #f00;
+	margin: 20px auto;
+}
+#tab .top ul{
+	height: 41px;
+	margin-left: -1px;
+}
+#tab .top ul li{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	width: 99px;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	border-left: 1px solid #f00;
+	border-bottom: 1px solid #f00;
+}
+#tab .top ul .select{
+	padding-left: 1px;
+	border-bottom: 0;
+}
+.tabDemo{
+	display: none;
+}
+#tab .bottom p{
+	text-align: center;
+	line-height: 50px;
+}
+
+/* 纵向tab */
+#tab1{
+	width: 600px;
+	margin: 50px auto;
+	border: 1px solid #f00;
+	overflow: hidden;
+	display: flex;
+	flex-flow: row;
+}
+#tab1 .left ul{
+	flex: 101px;
+	height: 201px;
+	margin-bottom: -1px;
+}
+#tab1 .left ul li{
+	width: 100px;
+	border-right: 1px solid #f00;
+	border-bottom: 1px solid #f00;
+	line-height: 40px;
+	height: 40px;
+	text-align: center;
+}
+#tab1 .left ul .select{
+	border-right: 0;
+	padding-bottom: 1px;
+}
+#tab1 .right{
+	flex: 500px;
+}
+.tab1Demo{
+	display: none;
+}
+.tab1Demo img{
+	display: block;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+	<!-- 横向tab -->
+	<div class="wrapper">
+		<div id="tab">
+			<div class="top">
+				<ul>
+					<li class="select"><a href="">亚瑟</a></li>
+					<li><a href="">剑豪</a></li>
+					<li><a href="">提莫</a></li>
+					<li><a href="">安妮</a></li>
+					<li><a href="">拉克丝</a></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<div class="tabDemo" style="display: block;">
+					<p><img src="images/an.jpg" alt=""></p>
+				</div>
+				<div class="tabDemo">
+					<p><img src="images/jh.jpg" alt=""></p>
+				</div>
+				<div class="tabDemo">
+					<p><img src="images/lks.jpg" alt=""></p>
+				</div>
+				<div class="tabDemo">
+					<p><img src="images/tm.jpg" alt=""></p>
+				</div>
+				<div class="tabDemo">
+					<p><img src="images/ys.jpg" alt=""></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var tab=document.getElementById("tab");
+		var lis=tab.querySelector(".top").querySelectorAll("li");
+		var txts=tab.querySelector(".bottom").querySelectorAll(".tabDemo");
+		for(var i=0;i<lis.length;i++){
+			lis[i].id=i;
+			lis[i].onmouseover=function(){
+				for(var j=0;j<lis.length;j++){
+					lis[j].className="";
+					txts[j].style.display="none";
+				}
+				this.className="select";
+				txts[this.id].style.display="block";
+			}
+		}
+	</script>
+
+
+	<!-- 纵向tab -->
+	<div class="wrapper">
+		<div id="tab1">
+			<div class="left">
+				<ul>
+					<li class="select"><a href="">亚瑟</a></li>
+					<li><a href="">安妮</a></li>
+					<li><a href="">剑豪</a></li>
+					<li><a href="">拉克丝</a></li>
+					<li><a href="">提莫</a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="tab1Demo" style="display: block;"><img src="images/ys.jpg" alt=""></div>
+				<div class="tab1Demo"><img src="images/an.jpg" alt=""></div>
+				<div class="tab1Demo"><img src="images/jh.jpg" alt=""></div>
+				<div class="tab1Demo"><img src="images/lks.jpg" alt=""></div>
+				<div class="tab1Demo"><img src="images/tm.jpg" alt=""></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var tab1=document.getElementById("tab1");
+		var lis1=tab1.querySelector(".left").querySelectorAll("li");
+		var txts1=tab1.querySelector(".right").querySelectorAll(".tab1Demo");
+		for(var i=0;i<lis1.length;i++){
+			lis1[i].id=i;
+			lis1[i].onmouseover=function(){
+				for(var j=0;j<lis.length;j++){
+					lis1[j].className="";
+					txts1[j].style.display="none";
+				}
+				this.className="select";
+				txts1[this.id].style.display="block";
+			}
+		}
+	</script>
+</body>
+</html>
